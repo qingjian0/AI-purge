@@ -1,0 +1,26 @@
+schema_version: "1.0"
+policy: "catalog_all_transform_families; retain source_specific_names; apply_safe_canary_and_semantic_checks"
+mutators:
+  - {id: rephrase, family: semantic_rewrite, source_names: [Rephrase], fidelity_check: required}
+  - {id: summarize, family: semantic_rewrite, source_names: [Shorten, Summarize], fidelity_check: required}
+  - {id: expand, family: semantic_rewrite, source_names: [Expand, GenerateSimilar], fidelity_check: required}
+  - {id: translate, family: language, source_names: [Translation, Translate, MultiLingual], fidelity_check: required}
+  - {id: change_style, family: style, source_names: [ChangeStyle], fidelity_check: required}
+  - {id: sentence_reorder, family: structure, source_names: [AlterSentenceStructure, SentenceReorder], fidelity_check: required}
+  - {id: replace_words, family: lexical, source_names: [ReplaceWordsWithSynonyms, ReplaceWords], fidelity_check: required}
+  - {id: crossover, family: composition, source_names: [Crossover, CrossOver], fidelity_check: required}
+  - {id: insert_noise, family: character, source_names: [InsertMeaninglessCharacters, CharacterNoise], fidelity_check: required}
+  - {id: misspell, family: character, source_names: [MisspellSensitiveWords], fidelity_check: required}
+  - {id: normalize_unicode, family: representation, source_names: [UnicodeNormalization], fidelity_check: required}
+  - {id: whitespace_variant, family: representation, source_names: [WhitespaceAndPunctuation], fidelity_check: required}
+  - {id: case_variant, family: representation, source_names: [CaseTransform], fidelity_check: required}
+  - {id: format_transform, family: representation, source_names: [Markdown, JSON, XML, CodeBlock], fidelity_check: required}
+  - {id: encoding_transform, family: representation, source_names: [Base64, ROT13, Morse, Leetspeak], fidelity_check: "safe-canary-only"}
+  - {id: split_recombine, family: structure, source_names: [PayloadSplitting], fidelity_check: "safe-canary-only"}
+  - {id: reverse_sequence, family: structure, source_names: [Reverse, OddEven], fidelity_check: required}
+  - {id: binary_structure, family: structure, source_names: [BinaryTree], fidelity_check: required}
+  - {id: retokenize, family: tokenizer, source_names: [Retokenize], fidelity_check: required}
+  - {id: model_assisted_mutation, family: generative, source_names: [LLMRewrite], fidelity_check: required}
+  - {id: historical_mutation, family: feedback, source_names: [HistoricalInsight], fidelity_check: required}
+  - {id: gradient_guided_mutation, family: optimization, source_names: [MutationTokenGradient], fidelity_check: "research-only; controlled local models"}
+  - {id: custom_cipher, family: representation, source_names: [SelfDefineCipher], fidelity_check: "safe-canary-only"}
