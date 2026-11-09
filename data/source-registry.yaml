@@ -70,8 +70,10 @@ sources:
     url: https://github.com/centerforaisafety/HarmBench
     type: benchmark
     areas: [safety_benchmark, behaviors, classifiers]
-    status: discovered
-    license_status: "verify_dataset_and_code_terms"
+    status: indexed
+    upstream_default_branch: main
+    upstream_tree_sha: 8e1604d1171fe8a48d8febecd22f600e462bdcdd
+    license_status: "repository_code_license_mit; dataset_and_nested_project_terms_require_review"
   - id: bipia
     name: BIPIA
     url: https://github.com/BIPIA
@@ -177,3 +179,24 @@ sources:
     status: discovered
     upstream_default_branch: main
     license_status: "verify upstream license and dataset terms"
+  - id: prompt-injection-llm-benchmark-2026
+    name: Prompt Injection Attacks in Large Language Models Benchmark
+    url: https://github.com/MuhammadSaeedAnwar/Prompt-Injection-LLM-Benchmark
+    type: research_dataset_and_evaluation
+    areas: [direct_injection, indirect_injection, jailbreak, multi_turn, encoding_obfuscation]
+    status: discovered
+    license_status: "repository reports MIT; verify dataset contents and third-party material terms"
+  - id: awesome-ai-security-tools
+    name: SECURITY-awesome-ai-security-tools
+    url: https://github.com/iosub/SECURITY-awesome-ai-security-tools
+    type: curated_source_index
+    areas: [tool_discovery, llm_redteaming, agent_security, guardrails, benchmarks]
+    status: discovered
+    license_status: "verify repository license; each linked project retains its own terms"
+  - id: ai-red-teaming-tools-directory
+    name: AI Red Teaming Tools
+    url: https://github.com/aglio-lab/ai-red-teaming-tools
+    type: curated_source_index
+    areas: [tool_discovery, redteam_frameworks, scanners, datasets, standards]
+    status: discovered
+    license_status: "verify repository license; each linked project retains its own terms"
