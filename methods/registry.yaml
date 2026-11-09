@@ -1,0 +1,21 @@
+schema_version: "1.0"
+policy: "retain_all_methods_and_variants; do_not_infer_effectiveness_from_name"
+methods:
+  - {id: gptfuzz, family: mutation_search, components: [seed, mutator, selector, evaluator], variants: [template_mutation, crossover, expansion, rephrase, shortening], status: indexed}
+  - {id: renellm, family: scenario_rewrite, components: [mutator, constraint, evaluator], variants: [style_change, meaningless_character_insertion, misspelling, rephrase, similar_generation, sentence_restructure], status: indexed}
+  - {id: pair, family: iterative_search, components: [attack_model, target_model, evaluator, history], variants: [feedback_iteration, historical_insight], status: indexed}
+  - {id: tap, family: tree_search, components: [candidate_generation, scoring, pruning], variants: [branching, introspection, off_topic_pruning], status: indexed}
+  - {id: autodan, family: automated_candidate_search, components: [candidate_generation, mutation, evaluation], variants: [rephrase, crossover, synonym_replacement], status: indexed}
+  - {id: gcg, family: discrete_optimization, components: [token_mutation, loss_selection], variants: [gradient_guided_token_search], status: indexed}
+  - {id: ica, family: in_context_examples, components: [example_context, evaluator], variants: [few_shot_context], status: indexed}
+  - {id: deepinception, family: scenario_framing, components: [nested_context], variants: [role_and_scenario_layers], status: indexed}
+  - {id: cipher, family: representation_transform, components: [encoding, decoding_validation], variants: [ascii, caesar, morse, custom_cipher], status: indexed}
+  - {id: codechameleon, family: representation_transform, components: [structure_transform], variants: [binary_tree, length, reverse, odd_even], status: indexed}
+  - {id: multilingual, family: language_transform, components: [translation], variants: [cross_language], status: indexed}
+  - {id: jailbreak, family: legacy_recipe_collection, components: [encoding, formatting, combination], variants: [base64, rot13, leetspeak, disemvowel, split_and_recombine], status: indexed, note: "Catalog methods and evaluate safely; do not ship harmful executable payload recipes."}
+  - {id: crescendo, family: multi_turn_escalation_testing, components: [orchestration, state_tracking, scoring], variants: [multi_turn_progression], status: indexed}
+  - {id: prompt_injection, family: instruction_data_confusion, components: [carrier_document, untrusted_content, canary, evaluator], variants: [direct, indirect, retrieved_content, tool_output], status: indexed}
+  - {id: latent_injection, family: indirect_injection, components: [benign_task, carrier, canary, scorer], variants: [document_carrier, metadata_carrier, retrieved_snippet], status: indexed}
+  - {id: multimodal_injection, family: multimodal, components: [image_audio_video_input, provenance, evaluator], variants: [visual_text, spoken_content, embedded_document], status: discovered}
+  - {id: package_hallucination, family: supply_chain, components: [code_generation, package_registry_scorer], variants: [ecosystem_registry_check], status: indexed}
+  - {id: privacy_probes, family: privacy, components: [synthetic_private_data, leakage_detector], variants: [completion, memorization, unintended_disclosure], status: indexed}
