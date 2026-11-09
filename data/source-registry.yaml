@@ -1,0 +1,137 @@
+schema_version: "1.0"
+updated: "2026-11-09"
+policy: "register_all_traceable_sources; preserve_duplicates_as_relationships; verify_license_before_reuse"
+sources:
+  - id: easyjailbreak
+    name: EasyJailbreak
+    url: https://github.com/EasyJailbreak/EasyJailbreak
+    type: framework
+    areas: [seed, selector, mutator, constraint, evaluator, recipes, datasets]
+    status: indexed
+    license_status: "verify_upstream_license_and_data_terms"
+  - id: fuzzyai
+    name: FuzzyAI
+    url: https://github.com/cyberark/FuzzyAI
+    type: framework
+    areas: [mutator, attack_orchestration, prompt_templates, fuzzing]
+    status: indexed
+    license_status: "verify_upstream_license_and_data_terms"
+  - id: pyrit
+    name: PyRIT
+    url: https://github.com/microsoft/PyRIT
+    type: framework
+    areas: [converter, seed_prompt, scorer, orchestrator, target]
+    status: indexed
+    license_status: "verify_upstream_license_and_data_terms"
+  - id: garak
+    name: garak
+    url: https://github.com/NVIDIA/garak
+    type: scanner
+    areas: [probes, detectors, generators, reports, datasets]
+    status: indexed
+    license_status: "verify_upstream_license_and_data_terms"
+  - id: agentdojo
+    name: AgentDojo
+    url: https://github.com/ethz-spylab/agentdojo
+    type: benchmark
+    areas: [agent_tasks, tool_environment, injection, defenses]
+    status: indexed
+    license_status: "verify_upstream_license_and_data_terms"
+  - id: injecagent
+    name: InjecAgent
+    url: https://github.com/uiuc-kang-lab/InjecAgent
+    type: benchmark
+    areas: [indirect_injection, tool_use, benchmark_cases]
+    status: indexed
+    license_status: "verify_upstream_license_and_data_terms"
+  - id: promptfoo
+    name: promptfoo
+    url: https://github.com/promptfoo/promptfoo
+    type: evaluation_framework
+    areas: [evals, assertions, redteam, ci]
+    status: discovered
+    license_status: "verify_upstream_license_and_data_terms"
+  - id: deepteam
+    name: DeepTeam
+    url: https://github.com/confident-ai/deepteam
+    type: redteam_framework
+    areas: [vulnerability_taxonomy, attack_methods, evaluation]
+    status: discovered
+    license_status: "verify_upstream_license_and_data_terms"
+  - id: jailbreakbench
+    name: JailbreakBench
+    url: https://github.com/JailbreakBench/jailbreakbench
+    type: benchmark
+    areas: [benchmark_protocol, dataset, evaluator]
+    status: discovered
+    license_status: "verify_dataset_and_code_terms"
+  - id: harmbench
+    name: HarmBench
+    url: https://github.com/centerforaisafety/HarmBench
+    type: benchmark
+    areas: [safety_benchmark, behaviors, classifiers]
+    status: discovered
+    license_status: "verify_dataset_and_code_terms"
+  - id: bipia
+    name: BIPIA
+    url: https://github.com/BIPIA
+    type: benchmark
+    areas: [indirect_prompt_injection, benchmark]
+    status: discovered
+    license_status: "verify_exact_repository_and_dataset_terms"
+  - id: promptbench
+    name: PromptBench
+    url: https://github.com/microsoft/PromptBench
+    type: benchmark
+    areas: [prompt_robustness, adversarial_prompting, evaluation]
+    status: discovered
+    license_status: "verify_upstream_license_and_data_terms"
+  - id: hackaprompt
+    name: HackAPrompt
+    url: https://huggingface.co/datasets/hackaprompt
+    type: dataset
+    areas: [prompt_injection_attempts, human_generated_variants]
+    status: discovered
+    license_status: "verify_dataset_card_and_terms"
+  - id: tensortrust
+    name: Tensor Trust
+    url: https://tensortrust.ai/
+    type: benchmark
+    areas: [prompt_injection_game, attack_defense_data]
+    status: discovered
+    license_status: "verify_dataset_terms"
+  - id: gpt6-astra
+    name: gpt6-Astra
+    url: https://github.com/3641397194-wq/gpt6-Astra
+    type: harness_and_prompt_collection
+    areas: [prompt_packs, skills, harness_workflows]
+    status: indexed
+    license_status: "verify_upstream_license_and_data_terms"
+  - id: spiritual-spell-red-teaming
+    name: Spiritual-Spell-Red-Teaming
+    url: https://github.com/Goochbeater/Spiritual-Spell-Red-Teaming
+    type: prompt_collection
+    areas: [prompt_templates, multi_turn_context, categories]
+    status: indexed
+    license_status: "verify_upstream_license_and_data_terms"
+  - id: giskard
+    name: Giskard
+    url: https://github.com/Giskard-AI/giskard
+    type: evaluation_framework
+    areas: [agent_scan, vulnerability_scan, evaluation]
+    status: discovered
+    license_status: "verify_upstream_license_and_data_terms"
+  - id: spikee
+    name: Spikee
+    url: https://github.com/WithSecureLabs/Spikee
+    type: security_testing
+    areas: [prompt_injection, agent_security]
+    status: discovered
+    license_status: "verify_upstream_license_and_data_terms"
+  - id: agentic_security
+    name: Agentic Security
+    url: https://github.com/msoedov/agentic_security
+    type: security_testing
+    areas: [agent_redteam, prompt_injection]
+    status: discovered
+    license_status: "verify_upstream_license_and_data_terms"
