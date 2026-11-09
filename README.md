@@ -51,3 +51,12 @@ AI-purge 采用全量登记策略：可追溯的提示词家族、方法、算�
 ## 使用要求
 
 仅在拥有或明确获准测试的模型、应用、数据和环境中使用。优先使用合成数据和专用 canary。不得将真实凭据、个人信息或生产数据放入样本。遵守上游许可证、服务条款和适用法律。
+
+## Source-backed indexes
+
+- [Upstream file index](docs/UPSTREAM-FILE-INDEX.md): upstream repository paths, Git tree snapshots, blob SHAs, and component mappings.
+- [Dataset registry](data/dataset-registry.yaml): dataset identities, upstream paths, snapshot identifiers, and redistribution status.
+- [Recipe source map](data/recipe-source-map.yaml): algorithm and mutator names mapped to upstream source files and blob SHAs.
+- [Source registry](data/source-registry.yaml): source repository inventory, including newly registered AISafetyLab, LLAMATOR, Augustus, Open-Prompt-Injection, and detector benchmark projects.
+
+The new indexes are provenance records, not a claim that upstream code or datasets have been imported, licensed for redistribution, or implemented in this repository. See each record's status and license notes.
