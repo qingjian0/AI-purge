@@ -24,7 +24,7 @@ AI-purge 采用全量登记策略：可追溯的提示词家族、方法、算�
 | [全量收录总目录](docs/MASTER-INVENTORY.md) | 收录规则、分类和状态 |
 | [提示词目录](docs/PROMPT-CATALOG.md) | 样本分类、格式与生命周期 |
 | [方法注册表](docs/ATTACK-METHODS.md) | 方法原理与安全化测试 |
-| [组件矩阵](docs/COMPONENT-MATRIX.md) | Selector、Mutator、Constraint、Evaluator 等统一接口 |
+| [组件矩阵](docs/COMPONENT-MATRIX.md) | Selector、Mutator、Constraint、Evaluator 等统一接口 |\n| [Recipe 全量目录](docs/RECIPE-CATALOG.md) | 原始算法名、选择器、变异器、约束器和评估器 |\n| [攻击面目录](docs/ATTACK-SURFACE-CATALOG.md) | 模型、RAG、Agent、多模态、隐私和供应链测试面 |
 | [变异引擎](docs/MUTATION-ENGINE.md) | 算子、组合、去重和预算 |
 | [Agent 安全](docs/AGENT-SECURITY.md) | 工具、记忆、RAG、MCP |
 | [评估规范](docs/EVALUATION.md) | 指标、判定和报告 |
