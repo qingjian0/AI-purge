@@ -1,0 +1,166 @@
+schema_version: "1.0"
+updated: "2026-11-09"
+policy:
+  - "source_path_and_blob_sha_are_primary_provenance"
+  - "method_name_does_not_imply_current_effectiveness"
+  - "retain_aliases_and_cross_project_reimplementations_as_separate_records"
+  - "index only; no operational jailbreak payload text is embedded"
+recipes:
+  - id: aisafetylab-advprompter
+    name: AdvPrompter
+    source_id: aisafetylab
+    source_path: aisafetylab/attack/attackers/advprompter.py
+    blob_sha: ca173b17d682ad346d708fae7c4bcdae47317153
+    family: adversarial_prompt_optimization
+    status: source_indexed
+  - id: aisafetylab-autodan
+    name: AutoDAN
+    source_id: aisafetylab
+    source_path: aisafetylab/attack/attackers/autodan.py
+    blob_sha: 3a7c0c5e60d705792597bc51e167f9ea4a24bdff
+    family: evolutionary_prompt_optimization
+    related_sources: [EasyJailbreak]
+    status: source_indexed
+  - id: aisafetylab-cipher
+    name: Cipher
+    source_id: aisafetylab
+    source_path: aisafetylab/attack/attackers/cipher.py
+    blob_sha: e73479daadfa65d84f84f955c99492cf5fdcfa49
+    family: transformation_and_encoding
+    status: source_indexed
+    payload_handling: "metadata_only; use harmless canary transformations in this project"
+  - id: aisafetylab-deep-inception
+    name: DeepInception
+    source_id: aisafetylab
+    source_path: aisafetylab/attack/attackers/deep_inception.py
+    blob_sha: 9b34c29b05c4e6b1b591e866a34482afc5dfe9e3
+    family: nested_context_and_role_framing
+    status: source_indexed
+  - id: aisafetylab-dra
+    name: DRA
+    source_id: aisafetylab
+    source_path: aisafetylab/attack/attackers/dra.py
+    blob_sha: 50d5739a2eee8ff752b7bc2d8c9007400469cb7a
+    family: adaptive_redteam
+    status: source_indexed
+  - id: aisafetylab-gcg
+    name: GCG
+    source_id: aisafetylab
+    source_path: aisafetylab/attack/attackers/gcg.py
+    blob_sha: 186f3ac5337a2806d6ce7e1a24b6e6212ddf9084
+    family: gradient_guided_suffix_optimization
+    status: source_indexed
+    payload_handling: "do_not_mirror_operational_suffixes"
+  - id: aisafetylab-gptfuzzer
+    name: GPTFuzzer
+    source_id: aisafetylab
+    source_path: aisafetylab/attack/attackers/gptfuzzer.py
+    blob_sha: 6aea95e0cc12302144d3add5bdd53c753570d13a
+    family: seed_mutation_search
+    related_sources: [EasyJailbreak, GPTFuzz]
+    status: source_reviewed
+    observed_components: [seed_templates, MCTS_selection, crossover, expand, generate_similar, shorten, rephrase, classification_scorer]
+  - id: aisafetylab-ica
+    name: ICA
+    source_id: aisafetylab
+    source_path: aisafetylab/attack/attackers/ica.py
+    blob_sha: 473d10ee845720a6b75828caa644a6678ddf24ec
+    family: in_context_demonstration
+    status: source_indexed
+  - id: aisafetylab-jailbroken
+    name: JailBroken
+    source_id: aisafetylab
+    source_path: aisafetylab/attack/attackers/jailbroken.py
+    blob_sha: 5cbcfcfcb7dbba19832f08743d7ba68889a09719
+    family: prompt_transformation
+    status: source_indexed
+  - id: aisafetylab-laa
+    name: LAA
+    source_id: aisafetylab
+    source_path: aisafetylab/attack/attackers/laa.py
+    blob_sha: d64a989ffff2783ddeab66b738ddf4c28170f64f
+    family: language_model_assisted_optimization
+    status: source_indexed
+  - id: aisafetylab-multilingual
+    name: MultiLingual
+    source_id: aisafetylab
+    source_path: aisafetylab/attack/attackers/multilingual.py
+    blob_sha: 7e6fdb45fe925bcbbfa9777a25919caf6ba17b8e
+    family: multilingual_transformation
+    status: source_indexed
+  - id: aisafetylab-pair
+    name: PAIR
+    source_id: aisafetylab
+    source_path: aisafetylab/attack/attackers/pair.py
+    blob_sha: 12e47ba8d476f1bc2acf67d383c1fdbbb45f6d8e
+    family: iterative_black_box_attack
+    related_sources: [EasyJailbreak, HarmBench]
+    status: source_reviewed
+    observed_components: [attack_model, target_model, evaluator_model, historical_insight]
+  - id: aisafetylab-rene
+    name: ReNe
+    source_id: aisafetylab
+    source_path: aisafetylab/attack/attackers/rene.py
+    blob_sha: 9289b6613648f88fd3139b78b63ea104a9466fcf
+    family: prompt_rewriting
+    status: source_indexed
+  - id: aisafetylab-renellm
+    name: ReNeLLM
+    source_id: aisafetylab
+    source_path: aisafetylab/attack/attackers/renellm.py
+    blob_sha: da3ce8c49ff8c533a584879aae011e7d502f4732
+    family: nested_template_transformation
+    status: source_reviewed
+    payload_handling: "record template families and provenance; do not reproduce harmful scenario text"
+  - id: aisafetylab-tap
+    name: TAP
+    source_id: aisafetylab
+    source_path: aisafetylab/attack/attackers/tap.py
+    blob_sha: 78724374756d960fbbd4fdadbb4c655f5f52d627
+    family: tree_search_and_iterative_refinement
+    related_sources: [EasyJailbreak, HarmBench]
+    status: source_reviewed
+    observed_components: [introspect_generation, scores_selection, delete_off_topic, prompted_llm_scorer]
+  - id: harmbench-artprompt
+    name: ArtPrompt baseline
+    source_id: harmbench
+    source_path: baselines/artprompt/artprompt.py
+    blob_sha: 8dd4f43c4531fcc5d9c0a252bb2570624e129594
+    family: multimodal_or_visual_token_transformation
+    status: source_indexed
+  - id: harmbench-autoprompt
+    name: AutoPrompt baseline
+    source_id: harmbench
+    source_path: baselines/autoprompt/autoprompt.py
+    blob_sha: 1d77a1a54b36ca44f71cba52bf4799cbe60ff6a0
+    family: gradient_guided_prompt_optimization
+    status: source_indexed
+  - id: harmbench-pair-judge
+    name: PAIR judge component
+    source_id: harmbench
+    source_path: baselines/pair/judges.py
+    blob_sha: 0f36931ed90e09354de4e9b5e113eb30285fd1f8
+    family: evaluator_component
+    status: source_indexed
+  - id: harmbench-tap-judge
+    name: TAP judge component
+    source_id: harmbench
+    source_path: baselines/tap/judges.py
+    blob_sha: 4e1362a571f0e54a0a2a370034259151fef46a13
+    family: evaluator_component
+    status: source_indexed
+mutators:
+  - {id: aisafetylab-translate, name: Translate, source_id: aisafetylab, source_path: aisafetylab/attack/mutation/Translate.py, blob_sha: 5c969aaa990e44a0e612e7562a0414c302e91e0a, status: source_indexed}
+  - {id: aisafetylab-auto-obfuscation, name: AutoObfuscation, source_id: aisafetylab, source_path: aisafetylab/attack/mutation/auto_obfuscation.py, blob_sha: 8925bc41e2b20bfc63e5aa672237394e3c79ef42, status: metadata_only}
+  - {id: aisafetylab-auto-payload-splitting, name: AutoPayloadSplitting, source_id: aisafetylab, source_path: aisafetylab/attack/mutation/auto_payload_splitting.py, blob_sha: 1c8fd11b3668760643787b3abd298e5d92e75a68, status: metadata_only}
+  - {id: aisafetylab-base64, name: Base64, source_id: aisafetylab, source_path: aisafetylab/attack/mutation/base64.py, blob_sha: 5b9c6cbc015a3607732e04780d90f4f4e284117c, status: metadata_only}
+  - {id: aisafetylab-cipher-mutation, name: CipherMutation, source_id: aisafetylab, source_path: aisafetylab/attack/mutation/cipher_mutation.py, blob_sha: b93a06bc38fc20bffcf9068d7ba9978f41549b29, status: metadata_only}
+  - {id: aisafetylab-crossover, name: CrossOver, source_id: aisafetylab, source_path: aisafetylab/attack/mutation/crossover.py, blob_sha: ef093fb05ccf877999e06dee017b7ebdf02e8093, status: source_indexed}
+  - {id: aisafetylab-expand, name: Expand, source_id: aisafetylab, source_path: aisafetylab/attack/mutation/expand.py, blob_sha: 27bfbf2eb7bb5000aef5bfd60952fcf9f267ca65, status: source_indexed}
+  - {id: aisafetylab-generate-similar, name: GenerateSimilar, source_id: aisafetylab, source_path: aisafetylab/attack/mutation/generate_similar.py, blob_sha: efe9a2599f378cef236cacad8585adabac0a5eaf, status: source_indexed}
+  - {id: aisafetylab-gradient-sub, name: GradientSub, source_id: aisafetylab, source_path: aisafetylab/attack/mutation/gradient_sub.py, blob_sha: e55fe11f4ae7bdfd805a5d91bdcb919834890013, status: metadata_only}
+  - {id: aisafetylab-historical-insight, name: HistoricalInsight, source_id: aisafetylab, source_path: aisafetylab/attack/mutation/historical_insight.py, blob_sha: bce0147dd8c54c3877e05201546ddef0e55d54d9, status: source_indexed}
+  - {id: aisafetylab-introspect-generation, name: IntrospectGeneration, source_id: aisafetylab, source_path: aisafetylab/attack/mutation/introspect_generation.py, blob_sha: 70d5c637d520e31b450a508ca9c2b74797d5426d, status: source_indexed}
+  - {id: aisafetylab-rephrase, name: Rephrase, source_id: aisafetylab, source_path: aisafetylab/attack/mutation/rephrase.py, blob_sha: 977b1c7733f3fae634c00833a60e83e39298d8f7, status: source_indexed}
+  - {id: aisafetylab-shorten, name: Shorten, source_id: aisafetylab, source_path: aisafetylab/attack/mutation/shorten.py, blob_sha: abafbc483a612ed7adbb4b4d4f257b38f1bf50a9, status: source_indexed}
+  - {id: aisafetylab-synonyms, name: Synonyms, source_id: aisafetylab, source_path: aisafetylab/attack/mutation/synonyms.py, blob_sha: 354c7f8ccdc5312402e5f411a15b436a4171a35d, status: source_indexed}
