@@ -1,0 +1,140 @@
+schema_version: "1.0"
+updated: "2026-11-09"
+policy:
+  - "record_dataset_identity_and_upstream_path_before_import"
+  - "code_license_does_not_imply_dataset_redistribution_rights"
+  - "preserve_dataset_versions_and_splits_as_distinct_records"
+  - "do_not_copy_sensitive_or_operational_payload_text_into_this_repository"
+datasets:
+  - id: aisafetylab-icl-en
+    name: AISafetyLab ICL English data
+    repository: https://github.com/thu-coai/AISafetyLab
+    upstream_ref: main
+    upstream_tree_sha: 3fd15737dee5c6858466162d6a68e6cb6f996b27
+    path: aisafetylab/attack/attackers/data/icl/data_en.json
+    blob_sha: 9550846ce5faa86abfdfa5c8a0f04a7470481b88
+    size_bytes: 5227161
+    type: prompt_seed_or_demonstration_data
+    status: indexed
+    redistribution: not_imported
+    license_status: "repository code license is MIT; data-specific terms not yet verified"
+  - id: aisafetylab-icl-zh
+    name: AISafetyLab ICL Chinese data
+    repository: https://github.com/thu-coai/AISafetyLab
+    upstream_ref: main
+    upstream_tree_sha: 3fd15737dee5c6858466162d6a68e6cb6f996b27
+    path: aisafetylab/attack/attackers/data/icl/data_zh.json
+    blob_sha: a848cb1bfbdb54e13007b9780ae532e322825a39
+    size_bytes: 906437
+    type: prompt_seed_or_demonstration_data
+    status: indexed
+    redistribution: not_imported
+    license_status: "repository code license is MIT; data-specific terms not yet verified"
+  - id: aisafetylab-icl-demo
+    name: AISafetyLab ICL demonstrations
+    repository: https://github.com/thu-coai/AISafetyLab
+    upstream_ref: main
+    upstream_tree_sha: 3fd15737dee5c6858466162d6a68e6cb6f996b27
+    path: aisafetylab/attack/attackers/data/icl/demo.json
+    blob_sha: 529ed144ba9d8c7a044e1cab1e8eafc084e3dd8d
+    size_bytes: 32328
+    type: prompt_seed_or_demonstration_data
+    status: indexed
+    redistribution: not_imported
+    license_status: "repository code license is MIT; data-specific terms not yet verified"
+  - id: harmbench-text-all
+    name: HarmBench text behaviors all
+    repository: https://github.com/centerforaisafety/HarmBench
+    upstream_ref: main
+    upstream_tree_sha: 8e1604d1171fe8a48d8febecd22f600e462bdcdd
+    path: data/behavior_datasets/harmbench_behaviors_text_all.csv
+    blob_sha: 8a6b423d85e9acdc168c57a6a957755cfa86c4cb
+    size_bytes: 198850
+    type: benchmark_behavior_dataset
+    status: indexed
+    redistribution: not_imported
+    license_status: "repository license MIT; dataset-specific terms require review"
+  - id: harmbench-text-test
+    name: HarmBench text behaviors test split
+    repository: https://github.com/centerforaisafety/HarmBench
+    upstream_ref: main
+    upstream_tree_sha: 8e1604d1171fe8a48d8febecd22f600e462bdcdd
+    path: data/behavior_datasets/harmbench_behaviors_text_test.csv
+    blob_sha: a150df81f1efa24496f1495e1b96822fd403e339
+    size_bytes: 160828
+    type: benchmark_behavior_dataset
+    status: indexed
+    redistribution: not_imported
+    license_status: "repository license MIT; dataset-specific terms require review"
+  - id: harmbench-text-validation
+    name: HarmBench text behaviors validation split
+    repository: https://github.com/centerforaisafety/HarmBench
+    upstream_ref: main
+    upstream_tree_sha: 8e1604d1171fe8a48d8febecd22f600e462bdcdd
+    path: data/behavior_datasets/harmbench_behaviors_text_val.csv
+    blob_sha: 0cfc6c419122c58df0ccbda6351c0265dc72b125
+    size_bytes: 38024
+    type: benchmark_behavior_dataset
+    status: indexed
+    redistribution: not_imported
+    license_status: "repository license MIT; dataset-specific terms require review"
+  - id: harmbench-multimodal-all
+    name: HarmBench multimodal behaviors all
+    repository: https://github.com/centerforaisafety/HarmBench
+    upstream_ref: main
+    upstream_tree_sha: 8e1604d1171fe8a48d8febecd22f600e462bdcdd
+    path: data/behavior_datasets/harmbench_behaviors_multimodal_all.csv
+    blob_sha: d39d6c6b4ad68e37e60a408d3181791b49740221
+    size_bytes: 137713
+    type: multimodal_benchmark_dataset
+    status: indexed
+    redistribution: not_imported
+    license_status: "repository license MIT; dataset-specific terms require review"
+  - id: harmbench-text-classifier-validation
+    name: HarmBench text classifier validation set
+    repository: https://github.com/centerforaisafety/HarmBench
+    upstream_ref: main
+    upstream_tree_sha: 8e1604d1171fe8a48d8febecd22f600e462bdcdd
+    path: data/classifier_val_sets/text_behaviors_val_set.json
+    blob_sha: 3d7d0a98742a36b5c7824aadcea433e42a045022
+    size_bytes: 1875939
+    type: classifier_validation_dataset
+    status: indexed
+    redistribution: not_imported
+    license_status: "repository license MIT; dataset-specific terms require review"
+  - id: harmbench-multimodal-classifier-validation
+    name: HarmBench multimodal classifier validation set
+    repository: https://github.com/centerforaisafety/HarmBench
+    upstream_ref: main
+    upstream_tree_sha: 8e1604d1171fe8a48d8febecd22f600e462bdcdd
+    path: data/classifier_val_sets/multimodal_behaviors_val_set.json
+    blob_sha: bcf9fb999bee7c5a3d9018163f8eaa86d2b21ecd
+    size_bytes: 360084
+    type: classifier_validation_dataset
+    status: indexed
+    redistribution: not_imported
+    license_status: "repository license MIT; dataset-specific terms require review"
+  - id: pidbench-indirect-data
+    name: Prompt Injection Detector Benchmark indirect data component
+    repository: https://github.com/bastion-soft/pi-detector-bench
+    upstream_ref: main
+    upstream_tree_sha: fcf543fa9ccb790123173e3d98a149fd5f02c7e5
+    path: pidbench/indirect_data.py
+    blob_sha: 9da7d65220b132f6599d2af5238e1488df21233f
+    size_bytes: 14000
+    type: dataset_adapter
+    status: indexed
+    redistribution: source_reference_only
+    license_status: "MIT code; underlying benchmark datasets retain their own licenses"
+  - id: pidbench-multiturn-data
+    name: Prompt Injection Detector Benchmark multi-turn data component
+    repository: https://github.com/bastion-soft/pi-detector-bench
+    upstream_ref: main
+    upstream_tree_sha: fcf543fa9ccb790123173e3d98a149fd5f02c7e5
+    path: pidbench/multiturn_data.py
+    blob_sha: 4c77c80e5d9a36671d710a0012f6641ff26d7850
+    size_bytes: 29484
+    type: dataset_adapter
+    status: indexed
+    redistribution: source_reference_only
+    license_status: "MIT code; underlying benchmark datasets retain their own licenses"
