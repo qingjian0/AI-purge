@@ -135,3 +135,45 @@ sources:
     areas: [agent_redteam, prompt_injection]
     status: discovered
     license_status: "verify_upstream_license_and_data_terms"
+  - id: aisafetylab
+    name: AISafetyLab
+    url: https://github.com/thu-coai/AISafetyLab
+    type: research_framework
+    areas: [attackers, mutation, prompt_management, defenses, evaluation, datasets]
+    status: indexed
+    upstream_default_branch: main
+    upstream_tree_sha: 3fd15737dee5c6858466162d6a68e6cb6f996b27
+    license_status: "repository_license_mit; inspect bundled data and model artifacts separately"
+  - id: pi-detector-bench
+    name: Prompt Injection Detector Benchmark
+    url: https://github.com/bastion-soft/pi-detector-bench
+    type: detector_benchmark
+    areas: [prompt_injection_detection, false_positive_rate, threshold_analysis, indirect_injection, metrics]
+    status: indexed
+    upstream_default_branch: main
+    upstream_tree_sha: fcf543fa9ccb790123173e3d98a149fd5f02c7e5
+    license_status: "repository_license_mit; dataset licenses remain independent"
+  - id: llamator-core
+    name: LLAMATOR
+    url: https://github.com/LLAMATOR-Core/llamator
+    type: redteam_framework
+    areas: [chatbot_security_testing, attack_scenarios, evaluation]
+    status: discovered
+    upstream_default_branch: release
+    license_status: "verify exact release license and bundled dataset terms"
+  - id: augustus
+    name: Augustus
+    url: https://github.com/praetorian-inc/augustus
+    type: redteam_framework
+    areas: [llm_security_testing, prompt_injection, jailbreak, adversarial_testing]
+    status: discovered
+    upstream_default_branch: main
+    license_status: "verify upstream license and bundled data terms"
+  - id: open-prompt-injection
+    name: Open-Prompt-Injection
+    url: https://github.com/liu00222/Open-Prompt-Injection
+    type: benchmark_and_toolkit
+    areas: [prompt_injection, attack_defense_benchmark, evaluation]
+    status: discovered
+    upstream_default_branch: main
+    license_status: "verify upstream license and dataset terms"
